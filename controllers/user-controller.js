@@ -10,7 +10,7 @@ export const getAllUser = async(req, res, next) => {
     }
 
 if (!users) {
-    return res.status(404).json({ message: "No users found" });
+    return res.status(404).json({ message: "No Users Found" });
     }
 
     return res.status(200).json({users});
@@ -35,6 +35,7 @@ export const signup = async(req, res, next) => {
         username,
         email,
         password: hashedPassword,
+        posts: [],
     })
    
 

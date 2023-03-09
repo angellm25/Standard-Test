@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose'
+import mongoose, { Schema, model } from 'mongoose'
 
 const UserSchema = new Schema({
     username:{
@@ -15,8 +15,9 @@ const UserSchema = new Schema({
         type: String,
         required: true,
         minlength: 8
-    }
-}, {timestamps: true})
+    }, 
+    posts: [{type: mongoose.Types.ObjectId, ref: "Post", required: true}]
+},  {timestamps: true})
 
 export default model('User', UserSchema)
 
