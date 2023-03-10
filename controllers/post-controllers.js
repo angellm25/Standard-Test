@@ -6,7 +6,7 @@ import User from "../models/User.js";
 export const getAllPosts = async(req, res, next) => {
     let posts;
     try{
-        posts = await Post.find();
+        posts = await Post.find()
     } catch(err){
         return console.log(err)
     }
@@ -43,7 +43,7 @@ export const addPost = async(req, res, next) => {
     return res.status(200).json({post})
 } 
 
-export const editBlog = async(req, res,next) => {
+export const editPost= async(req, res,next) => {
     const postId = req.params.id;
     const {content} = req.body;
     let post;
@@ -77,7 +77,8 @@ export const deletePost = async(req,res,next) => {
 
     let post;
     try{
-        post = await Post.findByIdAndRemove(id).populate('user')
+        post = await Post.findByIdAndRemove(id)
+        post.deleted = true;
         await post.user.posts.pull(post)
         await post.user.save()
     } catch(err) {
@@ -93,7 +94,7 @@ export const getByUserId = async(req,res,next) => {
     const userId = req.params.id;
     let userPosts;
     try{
-        userPosts = await User.findById(userId).populate("post")
+        userPosts = await User.findById(userId)
     } catch(err) {
         return console.log(err)
     }
@@ -103,4 +104,7 @@ export const getByUserId = async(req,res,next) => {
     return res.status(200).json({posts: userPosts})
 }
 
+export const comment = async(req, res,next) => {
+    Post.findByIdAndUpdate(req.body.PostId,)
+}
 
