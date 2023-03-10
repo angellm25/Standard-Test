@@ -16,7 +16,13 @@ const UserSchema = new Schema({
         required: true,
         minlength: 8
     }, 
-    posts: [{type: mongoose.Types.ObjectId, ref: "Post", required: true}]
+    posts: [{
+        type: mongoose.Types.ObjectId, 
+        ref: "Post", 
+        required: true
+    }],
+    deleted:{type: Boolean, default: false}
+
 },  {timestamps: true})
 
 export default model('User', UserSchema)

@@ -10,7 +10,7 @@ export const getAllUser = async(req, res, next) => {
     }
 
 if (!users) {
-    return res.status(404).json({ message: "No Users Found" });
+    return res.status(404).json({ message: "No users found" });
     }
 
     return res.status(200).json({users});
@@ -68,4 +68,48 @@ export const login = async(req,res,next) => {
        .json({message: "Incorrect Password"})
     } return res.status(200).json({message:"Login Successful."})
 
+}
+
+export const getByUserId = async(req, res, next) => { 
+    User.find({ _id: req.params.id }).then(result => { 
+            res.status(200).json({ 
+                message: result 
+            }); 
+        }). 
+        catch(err => { 
+            res.status(404).json({ 
+                message: err 
+            }); 
+        }); 
+} 
+
+export const deleteUser = async(req,res,next) => {
+    const id = req.params.id;
+
+    let existingUser;
+    try{
+        existingUser = await User.findByIdAndRemove(id)
+        existingUser.deleted = true;
+    } catch(err) {
+        return console.log(err)
+    }
+    if(!existingUser) {
+        return res.status(500).json({message: "Unable To Delete"})
+    }
+    return res.status(200).json({message: "Successfully Deleted"})
+}
+
+export const updateUser = async (req, res, next) => {
+    const id = req.params.id;
+    const { username, email, password } = req.body;
+    let user;
+    try{
+        user = await User.findByIdAndUpdate(id, {username, email, password})
+    } catch(err) {
+        return console.log(err)
+    }
+    if(!user) {
+        return res.status(500).json({message: "Unable To Update"})
+    }
+    return res.status(200).json({user})
 }
