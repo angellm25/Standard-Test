@@ -11,6 +11,11 @@ const postSchema = new Schema({
         required: true
         
     },
+    deleted: {
+        type: Boolean, 
+        default: false
+    },
+
     comments: [{
             type: String,
             created: {type: Date, default:Date.now},
@@ -20,12 +25,8 @@ const postSchema = new Schema({
                 required: true
             },
             
-        }],
-        deleted: {
-            type: Boolean, 
-            default: false
-        }
-
+        }]
+       
 }, {timestamps: new Date()})
 
 export default model('Post', postSchema)
