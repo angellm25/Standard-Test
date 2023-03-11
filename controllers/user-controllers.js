@@ -29,7 +29,9 @@ export const signup = async(req, res, next) => {
         .status(400)
         .json({message: "User Exists! Login Instead!"});
     }
-    const hashedPassword = bcrypt.hashSync(password)
+    const saltRounds = 10;
+    const salt = bcrypt.genSaltSync(saltRounds);
+    const hashedPassword = bcrypt.hashSync(password, salt)
 
     const user = new User({
         username,
