@@ -72,14 +72,10 @@ export const getById = async(req,res,next) => {
 } 
 
 export const deletePost = async(req,res,next) => {
-    const id = req.params.id;
-
+    const _id = req.params.id;
     let post;
     try{
-        post = await Post.findByIdAndRemove(id)
-        post.deleted = true;
-        await post.user.posts.pull(post)
-        await post.user.save()
+        post = await Post.findByIdAndUpdate({_id} , {deleted : true}, {new: true});
     } catch(err) {
         return console.log(err)
     }

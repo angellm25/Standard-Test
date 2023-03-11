@@ -8,7 +8,7 @@ postRouter.get("/", getAllPosts);
 postRouter.post("/add", addPost)
 postRouter.put("/edit/:id", editPost)
 postRouter.get('/:id', getById)
-postRouter.delete('/:id', deletePost)
+postRouter.put('/:id', deletePost)
 postRouter.get('/:id', getByUserId)
 
 
