@@ -21,7 +21,10 @@ const postSchema = new Schema({
             },
             
         }],
-        deleted: {type: Boolean, default: false}
+        deleted: {
+            type: Boolean, 
+            default: false
+        }
 
 }, {timestamps: new Date()})
 
