@@ -9,6 +9,6 @@ router.post('/signup', signup)
 router.post('/login', login)
 router.get('/user/:id',getByUserId)
 router.delete('/:id', deleteUser)
-router.put('/:id/edit', updateUser)
+router.patch('/:id/update', updateUser)
 
 export default router; 
