@@ -1,221 +1,443 @@
 {
 	"info": {
-		"_postman_id": "a9a68a0d-f6cf-4f1a-9a74-2f09bdf8c28c",
+		"_postman_id": "63e6603e-6ad1-4b28-abd7-25fe29bd6eb1",
 		"name": "POST-IT",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "25810221-a9a68a0d-f6cf-4f1a-9a74-2f09bdf8c28c"
+		"_uid": "25810221-63e6603e-6ad1-4b28-abd7-25fe29bd6eb1"
 	},
 	"item": [
 		{
-			"name": "http://localhost:5000/api/users",
-			"id": "0b664b31-d2e7-4a69-b0df-c335e374633f",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5000/api/users",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:5000/api/users/signup",
-			"id": "3c2255bd-e0e4-4731-afb3-aea7acadab84",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"3.mia\",\r\n    \"email\": \"little@gmail.com\",\r\n    \"password\": \"sorrynotsorry\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignUp",
+					"id": "5d1574e4-3dd2-4294-9c69-0af235473b50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"4.mia\",\r\n    \"email\": \"joye@gmail.com\",\r\n    \"password\": \"sorrynotsorry\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"signup"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:5000/api/users/signup",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"users",
-						"signup"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:5000/api/users/login",
-			"id": "ac742d5f-8172-437d-8860-37de201a7bce",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"asopho@gmail.com\",\r\n    \"password\": \"joynuo1234\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Login",
+					"id": "f8faf0a7-7651-4004-9a67-7ba57511461c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"asopho@gmail.com\",\r\n    \"password\": \"joynuo1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5000/api/users/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"users",
-						"login"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"id": "83e129f6-afbb-4fda-b2bf-7206917a32c6"
 		},
 		{
-			"name": "http://localhost:5000/api/posts/6409144dcbdeb4976bf68e5a",
-			"id": "7470b6e4-5fad-4f6a-80b9-6a16f837f1ab",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5000/api/posts/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"posts",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:5000/api/posts/add",
-			"id": "d390b767-d5dd-4fff-b0ae-e59faae4a72a",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"content\": \"eating spaghetti!\",\r\n    \"user\": \"64090f7bc3828d8b36a916af\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Users",
+			"item": [
+				{
+					"name": "Display Users",
+					"id": "64501be5-b894-41cf-a276-141f04ba4971",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:5000/api/posts/add",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"posts",
-						"add"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:5000/api/posts/edit/6408c6ca464207154b44d353",
-			"id": "0cc470ee-fa43-4a5e-ae81-3b8d7631f29a",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"content\": \"Today is a good day!!!\"\r\n  \r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Get Single User",
+					"id": "e6ca0092-218f-401f-8fa5-9a68a34b5593",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users/user/640a5f695609023ddd55c139",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"user",
+								"640a5f695609023ddd55c139"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:5000/api/posts/edit/6408c6ca464207154b44d353",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"posts",
-						"edit",
-						"6408c6ca464207154b44d353"
-					]
+				{
+					"name": "Delete User",
+					"id": "b510a6b2-0c31-419d-b456-f8b9d56b4064",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users/640a5f695609023ddd55c139",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"640a5f695609023ddd55c139"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"id": "ca05ee72-4781-47c3-aa13-ae91acd8333c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"thetamin\",\r\n    \"email\": \"w.t@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/640b385d9c0ff1d67c9a4d39/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"640b385d9c0ff1d67c9a4d39",
+								"update"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"id": "5d8712ba-451e-4047-9f4d-4b830f3b802b"
 		},
 		{
-			"name": "http://localhost:5000/api/posts/6408c6ca464207154b44d353",
-			"id": "1d8cf091-3737-4ca0-bbe7-32d19efcd3e3",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5000/api/posts/6408c6ca464207154b44d353",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"posts",
-						"6408c6ca464207154b44d353"
-					]
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Create Post",
+					"id": "dfb946fd-e3ca-4637-9a18-3931b0f7149b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"Have a good day\",\r\n    \"user\": \"640b385d9c0ff1d67c9a4d39\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/posts/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Display posts",
+					"id": "d83822e6-2e60-495c-aaa6-5b4e9c5d6000",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit user posts",
+					"id": "c38a954d-5198-42f6-af50-4a827f2a5cc2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"Today is a good day!!!\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/posts/edit/6408c6ca464207154b44d353",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"edit",
+								"6408c6ca464207154b44d353"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete posts",
+					"id": "72b678e4-f6fc-4f04-ab23-401fa59e1864",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/6408c6ca464207154b44d353",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"6408c6ca464207154b44d353"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Display a User's posts",
+					"id": "60a39ded-4d80-45d5-8a12-77d68db9b7ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/640b385d9c0ff1d67c9a4d39",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"640b385d9c0ff1d67c9a4d39"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"id": "3b320ef0-7c12-4c6d-a582-2336914bd51c"
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Create comment on a post",
+					"id": "401ed84a-7345-45dd-904a-503b382613fa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post\": \"640a79bffc5a2e3e8151d6ef\",\r\n    \"user\": \"640b385d9c0ff1d67c9a4d39\",\r\n    \"Text\": \"I will\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/posts/640a79bffc5a2e3e8151d6ef/addComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"640a79bffc5a2e3e8151d6ef",
+								"addComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comments from a post",
+					"id": "5ed0ef9e-8b10-4bef-95ab-ae6ae87d66fa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/640bbb9083a912b2db38278c/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"640bbb9083a912b2db38278c",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment",
+					"id": "50704f23-f44b-4b84-b7dd-1c4b8101a347",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/deleteComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"deleteComment"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "3dc4acb7-1634-4685-810e-fbe67d4888bf"
 		}
 	]
 }
