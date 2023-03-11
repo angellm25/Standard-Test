@@ -51,9 +51,9 @@ export const deleteComment = async(req,res,next) => {
 
     let comment;
     try{
-        comment = await Post.findByIdAndRemove(id)
-        {$set: {isDeleted: true}}
-        await comment.posts.comments.pull(comment)
+        comment = await Comment.findByIdAndRemove(id)
+        comment.deleted = true;
+        await comment.post.comments.pull(comment)
         await comment.post.save()
     } catch(err) {
         return console.log(err)

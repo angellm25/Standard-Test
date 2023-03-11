@@ -100,11 +100,11 @@ export const deleteUser = async(req,res,next) => {
 }
 
 export const updateUser = async (req, res, next) => {
-    const id = req.params.id;
-    const { username, email, password } = req.body;
+    const userId = req.params.id;
+    const { username, password, email} = req.body;
     let user;
     try{
-        user = await User.findByIdAndUpdate(id, {username, email, password})
+        user = await User.findByIdAndUpdate(userId, {username, email, password})
     } catch(err) {
         return console.log(err)
     }

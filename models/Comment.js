@@ -19,8 +19,8 @@ const CommentSchema = new Schema({
         ref: 'Post', 
         required: true 
     }],
-    isDeleted: {
-        type:Boolean,
+    deleted: {
+        type: Boolean,
         default: false
     } 
 }); 
