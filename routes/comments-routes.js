@@ -4,8 +4,8 @@ import { addComment, deleteComment, getComments} from '../controllers/comments-c
 
 const commentRouter = express.Router();
 
-commentRouter.get('/posts/:id/comments', getComments)
-commentRouter.post('/posts/:id/addComment', addComment)
-commentRouter.delete('/posts/:id/deleteComment', deleteComment)
+commentRouter.get('/:id/comments', getComments)
+commentRouter.post('/:id/addComment', addComment)
+commentRouter.put('/:id/comment/:id', deleteComment)
 
 export default commentRouter;
