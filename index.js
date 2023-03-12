@@ -12,9 +12,9 @@ app.use(express.json())
 const PORT = process.env.PORT || 5000
 
 
-app.use('/api/users', router);
-app.use("/api/posts", postRouter)
-app.use("/api/", commentRouter)
+app.use('/users', router);
+app.use("/posts", postRouter)
+app.use("/posts", commentRouter)
 
 
 
