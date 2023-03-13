@@ -5,11 +5,14 @@ id = 35b17945-3744-4df4-99ea-5222935635a0
 
 [relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"25810221-5c06930c-1651-4f6f-9759-2092210fb940","path":"POST-IT.json","metaData":{}}
+files[] = {"id":"25810221-a9b4d990-74ed-4867-815b-2cad0ce93c49","path":"Post-It API Documentation.json","metaData":{}}
 
 [relations.collections.metaData]
 
 [relations.apiDefinition]
 rootDirectory = postman/schemas
+files[] = {"path":"index.yaml","metaData":{}}
 
 [relations.apiDefinition.metaData]
+type = openapi:3
+rootFiles[] = index.yaml

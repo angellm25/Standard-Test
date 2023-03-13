@@ -1,0 +1,1217 @@
+{
+	"info": {
+		"_postman_id": "a9b4d990-74ed-4867-815b-2cad0ce93c49",
+		"name": "Post-It API Documentation",
+		"description": "Simple Social Media API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "25810221-a9b4d990-74ed-4867-815b-2cad0ce93c49"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get a user by ID",
+							"id": "1c2d7dc5-2768-4024-b352-0f357d971480",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "41803628",
+											"description": "(Required) The ID of the user to get."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "3a2557f9-347c-493d-897d-f96416a636af",
+									"name": "The user with the specified ID.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "41803628",
+													"description": "(Required) The ID of the user to get."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"username\": \"in labore id laboris\",\n  \"email\": \"Y6wuWF9n@idNUMYiG.own\",\n  \"password\": \"reprehenderit \",\n  \"id\": -47902551,\n  \"created_at\": \"1957-06-14T16:29:51.797Z\",\n  \"updated_at\": \"1977-11-15T12:09:28.878Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update a user by ID",
+							"id": "7ba83d14-f4b5-4cc0-a83c-9955127f06eb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"in labore id laboris\",\n  \"email\": \"Y6wuWF9n@idNUMYiG.own\",\n  \"password\": \"reprehenderit \",\n  \"id\": -47902551,\n  \"created_at\": \"1957-06-14T16:29:51.797Z\",\n  \"updated_at\": \"1977-11-15T12:09:28.878Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "41803628",
+											"description": "(Required) The ID of the user to update."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "be4afbdf-6d6b-4a81-9ac3-306cb3cc6724",
+									"name": "The updated user.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"in labore id laboris\",\n  \"email\": \"Y6wuWF9n@idNUMYiG.own\",\n  \"password\": \"reprehenderit \",\n  \"id\": -47902551,\n  \"created_at\": \"1957-06-14T16:29:51.797Z\",\n  \"updated_at\": \"1977-11-15T12:09:28.878Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "41803628",
+													"description": "(Required) The ID of the user to update."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"username\": \"in labore id laboris\",\n  \"email\": \"Y6wuWF9n@idNUMYiG.own\",\n  \"password\": \"reprehenderit \",\n  \"id\": -47902551,\n  \"created_at\": \"1957-06-14T16:29:51.797Z\",\n  \"updated_at\": \"1977-11-15T12:09:28.878Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete a user by ID",
+							"id": "4b478c29-a1d1-4041-893b-d9ec54dda79f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "41803628",
+											"description": "(Required) The ID of the user to delete."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "3ac4adb5-2e10-4ef2-8de5-5a5c6220d5fe",
+									"name": "The updated user.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "41803628",
+													"description": "(Required) The ID of the user to delete."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"username\": \"in labore id laboris\",\n  \"email\": \"Y6wuWF9n@idNUMYiG.own\",\n  \"password\": \"reprehenderit \",\n  \"id\": -47902551,\n  \"created_at\": \"1957-06-14T16:29:51.797Z\",\n  \"updated_at\": \"1977-11-15T12:09:28.878Z\"\n}"
+								}
+							]
+						}
+					],
+					"id": "4b535ab0-e2a9-4575-ac90-096af32cb18f"
+				},
+				{
+					"name": "Get all users",
+					"id": "83ac5ee3-6f2c-432e-98c1-d2933edda3b7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "7a810a7a-3bb4-496c-aaa4-197f619abc17",
+							"name": "A list of users.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"username\": \"dolor consequat cillum id\",\n    \"email\": \"3cVblRzP0gaY@ImKmCKlCAvdjDDddItnrkoJaxkNpDg.fjt\",\n    \"password\": \"consectetur sed nostrud\",\n    \"id\": 10963524,\n    \"created_at\": \"2019-06-21T18:25:46.068Z\",\n    \"updated_at\": \"1981-08-05T11:37:23.415Z\"\n  },\n  {\n    \"username\": \"ex nulla dolore anim nostrud\",\n    \"email\": \"2TLR9Rc@mSkFHZjDJUYqXNM.zzh\",\n    \"password\": \"sed ipsum nisi ullamco\",\n    \"id\": 74649625,\n    \"created_at\": \"2015-04-14T07:00:35.322Z\",\n    \"updated_at\": \"1945-10-21T18:50:13.425Z\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create a new user account",
+					"id": "a15569e5-f324-4f2b-b860-21f9c403f598",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"value\": \"reference #/components/schemas/UserSignUpRequest not found in the OpenAPI spec\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "dc304f63-a44e-4621-8aaf-c1f41567e6cb",
+							"name": "The created user.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"value\": \"reference #/components/schemas/UserSignUpRequest not found in the OpenAPI spec\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": \"reference #/components/schemas/UserSignUpResponse not found in the OpenAPI spec\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Log in to an existing user account",
+					"id": "7a02caa1-d9de-48bc-8e2e-442f893fec84",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"value\": \"reference #/components/schemas/UserLoginRequest not found in the OpenAPI spec\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "8947259e-2f6a-458b-a5a9-97207762e1cc",
+							"name": "Logged in successfully.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"value\": \"reference #/components/schemas/UserLoginRequest not found in the OpenAPI spec\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": \"reference #/components/schemas/UserLoginResponse not found in the OpenAPI spec\"\n}"
+						},
+						{
+							"id": "e71b5767-476b-47e2-bae1-b45bd94d97d7",
+							"name": "Unauthorized access.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"value\": \"reference #/components/schemas/UserLoginRequest not found in the OpenAPI spec\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "02c89144-246f-41b6-8da5-b39bf01c02fb"
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "comment",
+							"item": [
+								{
+									"name": "Get all comments under a postit.",
+									"id": "d1e202c9-ea42-4521-a172-1675ddcee2ae",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/posts/:id/comment/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posts",
+												":id",
+												"comment",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "41803628",
+													"description": "(Required) The ID of the post where the comments are"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "1ea595e2-dd67-4bbc-a099-6d7f2ae6c6ea",
+											"name": "A list of comments.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/posts/:id/comment/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"posts",
+														":id",
+														"comment",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "41803628",
+															"description": "(Required) The ID of the post where the comments are"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"user\": {\n      \"username\": \"esse voluptat\",\n      \"email\": \"qZqx50DPP@i.oav\",\n      \"password\": \"sint reprehenderit velit\",\n      \"id\": -95313974,\n      \"created_at\": \"2019-09-07T17:44:48.249Z\",\n      \"updated_at\": \"1982-03-10T18:09:18.580Z\"\n    },\n    \"post\": {\n      \"user\": {\n        \"username\": \"nostrud do Excepteur\",\n        \"email\": \"SNt@anrcxMQWXOizxiGrzNjjHzNhXkvqw.eqd\",\n        \"password\": \"id cillum dolore occaecat\",\n        \"id\": 39146082,\n        \"created_at\": \"2007-10-02T15:38:35.668Z\",\n        \"updated_at\": \"1987-03-24T14:55:34.794Z\"\n      },\n      \"content\": \"aute ut elit culpa\",\n      \"id\": -89532355,\n      \"created_at\": \"1973-04-23T21:24:20.513Z\",\n      \"updated_at\": \"1956-10-11T23:10:56.055Z\"\n    },\n    \"content\": \"cupidatat fugiat ex minim\",\n    \"id\": -76257570,\n    \"created_at\": \"1980-01-05T06:55:02.678Z\",\n    \"updated_at\": \"1986-02-11T23:37:08.198Z\"\n  },\n  {\n    \"user\": {\n      \"username\": \"commodo reprehenderit\",\n      \"email\": \"YJkkSqv@wbeCbkxQRMFHMEtSwSzlOlPOyyoMLFUG.eu\",\n      \"password\": \"Duis cupidatat\",\n      \"id\": 78802201,\n      \"created_at\": \"1993-11-19T12:54:14.679Z\",\n      \"updated_at\": \"1964-08-03T11:31:01.377Z\"\n    },\n    \"post\": {\n      \"user\": {\n        \"username\": \"quis consequat eiusmod\",\n        \"email\": \"9tI@FwgUyWUreGCpQwxTBnsaYZffuiZZBQpkz.mwe\",\n        \"password\": \"enim non\",\n        \"id\": -10642180,\n        \"created_at\": \"1988-09-13T02:43:53.908Z\",\n        \"updated_at\": \"1955-08-07T10:03:20.204Z\"\n      },\n      \"content\": \"mollit\",\n      \"id\": -50681261,\n      \"created_at\": \"1973-06-05T07:57:58.882Z\",\n      \"updated_at\": \"1964-02-05T01:38:44.844Z\"\n    },\n    \"content\": \"non cillum\",\n    \"id\": -85440216,\n    \"created_at\": \"1953-09-19T17:54:20.250Z\",\n    \"updated_at\": \"1956-01-09T05:02:15.118Z\"\n  }\n]"
+										}
+									]
+								},
+								{
+									"name": "Create a new comment",
+									"id": "83471dcd-2df2-42ab-8beb-d5eaa58bb653",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"user\": {\n    \"username\": \"esse occaecat\",\n    \"email\": \"qYRKKEv@hwiyFKcrcDYUGpENveWo.uapw\",\n    \"password\": \"in\",\n    \"id\": 21690333,\n    \"created_at\": \"2010-01-31T12:15:42.747Z\",\n    \"updated_at\": \"1976-03-16T07:47:15.385Z\"\n  },\n  \"post\": {\n    \"user\": {\n      \"username\": \"velit irure cillum\",\n      \"email\": \"9thFGZ-qP9Sr@fEYSxDtnoYpSoPFCVRmMpoiav.alxa\",\n      \"password\": \"consequat sunt\",\n      \"id\": -64207263,\n      \"created_at\": \"1995-03-01T20:29:08.873Z\",\n      \"updated_at\": \"1988-06-10T22:37:12.516Z\"\n    },\n    \"content\": \"mi\",\n    \"id\": 8493433,\n    \"created_at\": \"1944-04-16T10:37:14.051Z\",\n    \"updated_at\": \"2011-01-01T20:46:12.235Z\"\n  },\n  \"content\": \"aute\",\n  \"id\": -73322032,\n  \"created_at\": \"2011-09-27T08:20:10.231Z\",\n  \"updated_at\": \"1996-04-04T05:16:29.897Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/posts/:id/comment/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posts",
+												":id",
+												"comment",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "41803628",
+													"description": "(Required) The ID of the post where the comments are"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "640ebfff-401f-4d19-a12f-6f0d8981dff0",
+											"name": "The created comment.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"user\": {\n    \"username\": \"esse occaecat\",\n    \"email\": \"qYRKKEv@hwiyFKcrcDYUGpENveWo.uapw\",\n    \"password\": \"in\",\n    \"id\": 21690333,\n    \"created_at\": \"2010-01-31T12:15:42.747Z\",\n    \"updated_at\": \"1976-03-16T07:47:15.385Z\"\n  },\n  \"post\": {\n    \"user\": {\n      \"username\": \"velit irure cillum\",\n      \"email\": \"9thFGZ-qP9Sr@fEYSxDtnoYpSoPFCVRmMpoiav.alxa\",\n      \"password\": \"consequat sunt\",\n      \"id\": -64207263,\n      \"created_at\": \"1995-03-01T20:29:08.873Z\",\n      \"updated_at\": \"1988-06-10T22:37:12.516Z\"\n    },\n    \"content\": \"mi\",\n    \"id\": 8493433,\n    \"created_at\": \"1944-04-16T10:37:14.051Z\",\n    \"updated_at\": \"2011-01-01T20:46:12.235Z\"\n  },\n  \"content\": \"aute\",\n  \"id\": -73322032,\n  \"created_at\": \"2011-09-27T08:20:10.231Z\",\n  \"updated_at\": \"1996-04-04T05:16:29.897Z\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/posts/:id/comment/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"posts",
+														":id",
+														"comment",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "41803628",
+															"description": "(Required) The ID of the post where the comments are"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"user\": {\n    \"username\": \"esse occaecat\",\n    \"email\": \"qYRKKEv@hwiyFKcrcDYUGpENveWo.uapw\",\n    \"password\": \"in\",\n    \"id\": 21690333,\n    \"created_at\": \"2010-01-31T12:15:42.747Z\",\n    \"updated_at\": \"1976-03-16T07:47:15.385Z\"\n  },\n  \"post\": {\n    \"user\": {\n      \"username\": \"velit irure cillum\",\n      \"email\": \"9thFGZ-qP9Sr@fEYSxDtnoYpSoPFCVRmMpoiav.alxa\",\n      \"password\": \"consequat sunt\",\n      \"id\": -64207263,\n      \"created_at\": \"1995-03-01T20:29:08.873Z\",\n      \"updated_at\": \"1988-06-10T22:37:12.516Z\"\n    },\n    \"content\": \"mi\",\n    \"id\": 8493433,\n    \"created_at\": \"1944-04-16T10:37:14.051Z\",\n    \"updated_at\": \"2011-01-01T20:46:12.235Z\"\n  },\n  \"content\": \"aute\",\n  \"id\": -73322032,\n  \"created_at\": \"2011-09-27T08:20:10.231Z\",\n  \"updated_at\": \"1996-04-04T05:16:29.897Z\"\n}"
+										}
+									]
+								}
+							],
+							"id": "5b0bafc8-e244-4b79-8f56-31982748d243"
+						},
+						{
+							"name": "Get a post by ID",
+							"id": "1b0d02c8-fb58-4517-b67f-3664cdd4d890",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/posts/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "41803628",
+											"description": "(Required) The ID of the post to get."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "e9a23122-948e-4d42-af46-f1a296ef6e18",
+									"name": "The post with the specified ID.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/posts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "41803628",
+													"description": "(Required) The ID of the post to get."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"user\": {\n    \"username\": \"Lo\",\n    \"email\": \"e7h0s0L3bv3KO8f@VegMfHnUzOzVQWkyQtgPOp.wwe\",\n    \"password\": \"magna sit\",\n    \"id\": -17452162,\n    \"created_at\": \"1980-11-25T07:47:19.140Z\",\n    \"updated_at\": \"2021-10-31T17:58:53.761Z\"\n  },\n  \"content\": \"anim laboris officia eiusmod\",\n  \"id\": -60700532,\n  \"created_at\": \"1991-01-12T09:59:04.933Z\",\n  \"updated_at\": \"2022-01-20T15:49:24.560Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete a post by ID",
+							"id": "3316277c-093d-42c5-a5e8-970d7bd66339",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/posts/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "41803628",
+											"description": "(Required) The ID of the post to delete."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "98b9b784-2b1b-4217-bba2-f8e9bc6273de",
+									"name": "The post with the specified ID.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/posts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "41803628",
+													"description": "(Required) The ID of the post to delete."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"user\": {\n    \"username\": \"Lo\",\n    \"email\": \"e7h0s0L3bv3KO8f@VegMfHnUzOzVQWkyQtgPOp.wwe\",\n    \"password\": \"magna sit\",\n    \"id\": -17452162,\n    \"created_at\": \"1980-11-25T07:47:19.140Z\",\n    \"updated_at\": \"2021-10-31T17:58:53.761Z\"\n  },\n  \"content\": \"anim laboris officia eiusmod\",\n  \"id\": -60700532,\n  \"created_at\": \"1991-01-12T09:59:04.933Z\",\n  \"updated_at\": \"2022-01-20T15:49:24.560Z\"\n}"
+								}
+							]
+						}
+					],
+					"id": "7084d2e8-3e21-4d63-9f93-94457a460684"
+				},
+				{
+					"name": "Get all posts",
+					"id": "6ec7e6c2-71d6-4522-a32c-3a903224586a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/posts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "b87b65c6-9ee4-4b31-8d13-7426d47774d9",
+							"name": "A list of posts.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/posts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"user\": {\n      \"username\": \"consectetur sunt reprehenderit aliquip\",\n      \"email\": \"AUbu@mL.jq\",\n      \"password\": \"non elit\",\n      \"id\": -29079753,\n      \"created_at\": \"2021-02-14T23:21:54.008Z\",\n      \"updated_at\": \"1953-02-15T19:31:12.517Z\"\n    },\n    \"content\": \"occaecat\",\n    \"id\": 7989945,\n    \"created_at\": \"1978-05-29T04:29:07.704Z\",\n    \"updated_at\": \"1980-07-14T07:05:14.115Z\"\n  },\n  {\n    \"user\": {\n      \"username\": \"eiusmod qui\",\n      \"email\": \"1VX0HVPeEBkCP2@VwvZZXqEgNAQVpyuJlJIjWT.ysud\",\n      \"password\": \"enim commodo\",\n      \"id\": 44420306,\n      \"created_at\": \"1960-10-26T08:16:45.365Z\",\n      \"updated_at\": \"1967-09-24T11:34:28.178Z\"\n    },\n    \"content\": \"voluptate sit Lorem irure ex\",\n    \"id\": 98236366,\n    \"created_at\": \"2004-09-12T01:49:04.055Z\",\n    \"updated_at\": \"1975-11-25T14:56:04.801Z\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create a new post",
+					"id": "7c061f5e-1345-43b2-aa04-d13701af996b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user\": {\n    \"username\": \"Lo\",\n    \"email\": \"e7h0s0L3bv3KO8f@VegMfHnUzOzVQWkyQtgPOp.wwe\",\n    \"password\": \"magna sit\",\n    \"id\": -17452162,\n    \"created_at\": \"1980-11-25T07:47:19.140Z\",\n    \"updated_at\": \"2021-10-31T17:58:53.761Z\"\n  },\n  \"content\": \"anim laboris officia eiusmod\",\n  \"id\": -60700532,\n  \"created_at\": \"1991-01-12T09:59:04.933Z\",\n  \"updated_at\": \"2022-01-20T15:49:24.560Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/posts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "7a5f95cb-cf73-4093-9bc2-c28dfa030e20",
+							"name": "The created post.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user\": {\n    \"username\": \"Lo\",\n    \"email\": \"e7h0s0L3bv3KO8f@VegMfHnUzOzVQWkyQtgPOp.wwe\",\n    \"password\": \"magna sit\",\n    \"id\": -17452162,\n    \"created_at\": \"1980-11-25T07:47:19.140Z\",\n    \"updated_at\": \"2021-10-31T17:58:53.761Z\"\n  },\n  \"content\": \"anim laboris officia eiusmod\",\n  \"id\": -60700532,\n  \"created_at\": \"1991-01-12T09:59:04.933Z\",\n  \"updated_at\": \"2022-01-20T15:49:24.560Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/posts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"user\": {\n    \"username\": \"Lo\",\n    \"email\": \"e7h0s0L3bv3KO8f@VegMfHnUzOzVQWkyQtgPOp.wwe\",\n    \"password\": \"magna sit\",\n    \"id\": -17452162,\n    \"created_at\": \"1980-11-25T07:47:19.140Z\",\n    \"updated_at\": \"2021-10-31T17:58:53.761Z\"\n  },\n  \"content\": \"anim laboris officia eiusmod\",\n  \"id\": -60700532,\n  \"created_at\": \"1991-01-12T09:59:04.933Z\",\n  \"updated_at\": \"2022-01-20T15:49:24.560Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a post by ID",
+					"id": "8c1250ce-1763-407c-a37e-b3b20914cbd3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/posts/user/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "41803628",
+									"description": "(Required) The ID of the post to get."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "20d04d16-4017-4e47-82dd-ebcda1e5f3a5",
+							"name": "The post with the specified ID.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/posts/user/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts",
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "41803628",
+											"description": "(Required) The ID of the post to get."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"user\": {\n    \"username\": \"Lo\",\n    \"email\": \"e7h0s0L3bv3KO8f@VegMfHnUzOzVQWkyQtgPOp.wwe\",\n    \"password\": \"magna sit\",\n    \"id\": -17452162,\n    \"created_at\": \"1980-11-25T07:47:19.140Z\",\n    \"updated_at\": \"2021-10-31T17:58:53.761Z\"\n  },\n  \"content\": \"anim laboris officia eiusmod\",\n  \"id\": -60700532,\n  \"created_at\": \"1991-01-12T09:59:04.933Z\",\n  \"updated_at\": \"2022-01-20T15:49:24.560Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a post by ID",
+					"id": "1ff74b04-35fc-4ab9-8c4f-9186623676a3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user\": {\n    \"username\": \"Lo\",\n    \"email\": \"e7h0s0L3bv3KO8f@VegMfHnUzOzVQWkyQtgPOp.wwe\",\n    \"password\": \"magna sit\",\n    \"id\": -17452162,\n    \"created_at\": \"1980-11-25T07:47:19.140Z\",\n    \"updated_at\": \"2021-10-31T17:58:53.761Z\"\n  },\n  \"content\": \"anim laboris officia eiusmod\",\n  \"id\": -60700532,\n  \"created_at\": \"1991-01-12T09:59:04.933Z\",\n  \"updated_at\": \"2022-01-20T15:49:24.560Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/posts/edit/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts",
+								"edit",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "41803628",
+									"description": "(Required) The ID of the post to update."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "a8781d85-3a5c-413d-ad41-1f270ff7bda3",
+							"name": "The updated post.",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user\": {\n    \"username\": \"Lo\",\n    \"email\": \"e7h0s0L3bv3KO8f@VegMfHnUzOzVQWkyQtgPOp.wwe\",\n    \"password\": \"magna sit\",\n    \"id\": -17452162,\n    \"created_at\": \"1980-11-25T07:47:19.140Z\",\n    \"updated_at\": \"2021-10-31T17:58:53.761Z\"\n  },\n  \"content\": \"anim laboris officia eiusmod\",\n  \"id\": -60700532,\n  \"created_at\": \"1991-01-12T09:59:04.933Z\",\n  \"updated_at\": \"2022-01-20T15:49:24.560Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/posts/edit/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts",
+										"edit",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "41803628",
+											"description": "(Required) The ID of the post to update."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"user\": {\n    \"username\": \"Lo\",\n    \"email\": \"e7h0s0L3bv3KO8f@VegMfHnUzOzVQWkyQtgPOp.wwe\",\n    \"password\": \"magna sit\",\n    \"id\": -17452162,\n    \"created_at\": \"1980-11-25T07:47:19.140Z\",\n    \"updated_at\": \"2021-10-31T17:58:53.761Z\"\n  },\n  \"content\": \"anim laboris officia eiusmod\",\n  \"id\": -60700532,\n  \"created_at\": \"1991-01-12T09:59:04.933Z\",\n  \"updated_at\": \"2022-01-20T15:49:24.560Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a comment by ID",
+					"id": "ec993198-dece-4a2e-8613-86e1c3cc45b0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/posts/comment/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts",
+								"comment",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "41803628",
+									"description": "(Required) The ID of the comment to delete"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "0f9845da-7ec6-4325-a39c-3d597f28ab47",
+							"name": "The comment was deleted",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/posts/comment/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts",
+										"comment",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "41803628",
+											"description": "(Required) The ID of the comment to delete"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "fcc18d7a-9127-4d3f-a886-581468a11a44"
+		}
+	],
+	"variable": [
+		{
+			"id": "e69f5f13-6b71-4f1a-baba-da2421e3b592",
+			"key": "baseUrl",
+			"value": "https://post-it-2904.onrender.com",
+			"type": "string"
+		}
+	]
+}
