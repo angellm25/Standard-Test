@@ -9,7 +9,7 @@ postRouter.post("/add", addPost)
 postRouter.put("/edit/:id", editPost)
 postRouter.get('/:id', getById)
 postRouter.put('/:id', deletePost)
-postRouter.get('/:id', getByUserId)
+postRouter.get('/user/:id', getByUserId)
 
 
 export default postRouter;

@@ -90,8 +90,7 @@ export const deleteUser = async(req,res,next) => {
 
     let existingUser;
     try{
-        existingUser = await User.findByIdAndRemove(id)
-        existingUser.deleted = true;
+        existingUser = await User.findByIdAndUpdate({id}, {deleted: true}, {new:true})
     } catch(err) {
         return console.log(err)
     }
