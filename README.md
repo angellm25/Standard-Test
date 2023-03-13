@@ -16,6 +16,6 @@ Project is created with:
 
 [Data Model](https://app.dbdesigner.net/designer/schema/608573)
 
-[API Documentation]()
+[API Documentation](https://documenter.getpostman.com/view/25810221/2s93Jus2kc)
 
 API Live URL: [POST-IT](https://post-it-2904.onrender.com)
