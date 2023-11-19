@@ -7,7 +7,7 @@ const session = require('express-session')
 require('./auth/middleware.js')(passport)
 
 
-import router from  '../routes/user-routes.js';
+import UserRouter from  '../routes/user-routes.js';
 import router from './auth/authRoutes.js';
 import postRouter from '../routes/posts-routes.js';
 import commentRouter from '../routes/comments-routes.js';
@@ -31,7 +31,8 @@ app.use(passport.session());
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
-app.use('/users', router);
+app.use('/auth', router);
+app.use('/users', isAuthenticated, UserRouter);
 app.use("/posts", postRouter)
 app.use("/posts", commentRouter)
 const PORT = process.env.PORT || 5000
