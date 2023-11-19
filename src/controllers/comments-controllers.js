@@ -1,6 +1,6 @@
-import Comment from "../models/Comments.js";
+import Comment from "../src/models/Comments.js";
 import mongoose from 'mongoose'
-import Post from "../models/Posts.js"
+import Post from "../src/models/Posts.js"
 
 export const getComments = async(req, res, next) => {
     const postId = req.params.id;

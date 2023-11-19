@@ -7,8 +7,10 @@ const router = express.Router();
 router.get('/', getAllUser)
 router.post('/signup', signup)
 router.post('/login', login)
-router.get('/:id',getByUserId)
+router.get('/user/:id',getByUserId)
 router.put('/:id', deleteUser)
-router.patch('/:id', updateUser)
+router.patch('/:id/update', updateUser)
 
 export default router; 
+
+
